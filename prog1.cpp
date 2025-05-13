@@ -41,7 +41,7 @@ public:
         cout << "Account Type: " << this->type << endl;
         cout << "Balance: " << this->balance << endl;
     }
-    virtual void display() = 0;
+  
 };
 
 class SavingAcc : public Bank
@@ -72,7 +72,7 @@ public:
     {
         if ( withdrawAmount <= balance + overdraftLimit && this->balance > 0)
         {
-            Bank::withdraw(withdrawAmount, balance);
+            Bank::withdraw(withdrawAmount , balance);
         }
         else
         {
